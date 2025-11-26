@@ -4,6 +4,7 @@ public class Ticket {
     private Seance seanceid;
     private Spectateur spectateurid;
 
+
     public Ticket(int ticket, double prix, Seance seanceid, Spectateur spectateurid) {
         this.ticket = ticket;
         this.prix = prix;
