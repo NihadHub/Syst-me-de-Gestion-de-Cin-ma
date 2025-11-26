@@ -33,7 +33,4 @@ public class Connexion {
         return resultSet;
 
     }
-
-
-
 }
