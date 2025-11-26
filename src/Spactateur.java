@@ -1,13 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Spectateur {
 
     private int spectateurId;
     private String nom;
     private String email;
+    private List<Ticket> tickets;
 
     public Spectateur(int spectateurId, String email, String nom) {
         this.spectateurId = spectateurId;
         this.email = email;
         this.nom = nom;
+        this.tickets = new ArrayList<>();
     }
 
     public int getSpectateurId() {
