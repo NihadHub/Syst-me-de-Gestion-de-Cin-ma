@@ -9,10 +9,9 @@ public class Connexion {
     Statement statement;
 
     public Statement initConnexion() {
-        Connection connection = null;
         try {
 
-            connection = DriverManager.getConnection(
+            Connection connection = DriverManager.getConnection(
                     DB_URL,
                     USER,
                     PASS
@@ -34,4 +33,7 @@ public class Connexion {
         return resultSet;
 
     }
+
+
+
 }
