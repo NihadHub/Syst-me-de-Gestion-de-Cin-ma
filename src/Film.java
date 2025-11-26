@@ -1,8 +1,6 @@
-import java.sql.Connection;
-import java.sql.Statement;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.sql.*;
 public class Film {
     private int filmId;
     private static int idCounter = 1;
@@ -10,21 +8,15 @@ public class Film {
     private String titr ;
     private String categorie;
     private List<Seance> seances ;
-    private String sql  = "insert into film (id , titr , duree , categorie) values(?, ? ,?,?);";
 
 
-    public Film(Connection con , String duree , String titr, String categorie) throws SQLException {
+
+    public Film (String duree , String titr, String categorie) {
         this.filmId = idCounter++;
         this.titr = titr;
         this.duree = duree;
         this.categorie = categorie;
         seances = new ArrayList<>();
-        PreparedStatement ps = con.prepareStatement(sql);
-        ps.setInt(1,5);
-        ps.setString(2,titr);
-        ps.setString(3,duree);
-        ps.setString(4,categorie);
-        ps.executeUpdate();
 
     }
 
