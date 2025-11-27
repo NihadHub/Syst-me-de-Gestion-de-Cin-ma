@@ -24,7 +24,7 @@ public class Connexion {
         return statement;
     }
 
-
+    // This function responsibles for managing these queries (update, delete, insert), dose not includes Select query.
     public static void executerUneRequete(Statement statement, String requete) {
         try {
             int isCreated = statement.executeUpdate(requete);
@@ -34,6 +34,7 @@ public class Connexion {
         }
 
     }
+
 
 
 
