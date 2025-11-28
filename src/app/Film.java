@@ -1,17 +1,18 @@
+package app;
 
 import java.util.ArrayList;
 import java.util.List;
 public class Film {
     private int filmId;
     private static int idCounter = 1;
-    private String duree ;
+    private double duree ;
     private String titr ;
     private String categorie;
     private List<Seance> seances ;
 
 
 
-    public Film (String duree , String titr, String categorie) {
+    public Film (double duree , String titr, String categorie) {
         this.filmId = idCounter++;
         this.titr = titr;
         this.duree = duree;

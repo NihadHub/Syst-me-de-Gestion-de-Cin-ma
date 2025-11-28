@@ -35,7 +35,15 @@ public class Connexion {
 
     }
 
+    public void call(Statement statement, String requete) {
+        ResultSet resultSet = null;
+        try {
+           resultSet =  statement.executeQuery(requete);
 
+        } catch (SQLException error) {
+            error.printStackTrace();
+        }
+    }
 
 
 }

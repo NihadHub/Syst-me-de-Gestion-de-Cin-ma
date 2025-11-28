@@ -1,23 +1,36 @@
+import app.Film;
 import helper.Connexion;
+import helper.retriver.Films;
+import helper.retriver.GenerateQueries;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
+        List<Film> filmList = new ArrayList<>();
 
 
         Statement statement = Connexion.initConnexion();
 
         /*
-                Connexion.executerUneRequete(statement, " INSERT INTO Seance(horaire,salle,capaciter,filmId )" +
-                "values('14:00',1, 150, 7 ), " +
-                "('16:30',  2, 120, 9 )," +
-                "('18:00',  3, 200, 11 )," +
-                "('20:30',  1, 200, 8 )," +
-                "('22:00',  4, 100, 7 )," +
-                "('22:00',  2, 101, 10 )");
+                Connexion.executerUneRequete(statement, " INSERT INTO Ticket(prix,seanceId)" +
+                "values(140,1  ), (100,2  ), (110,3  ), (130,4  ), (101,5  ), (132,6  ) ");
         */
+
+
+        // filmList = (List<Film>) GenerateQueries.query(new Films(),statement,"SELECT * from Film");
+
+        //filmList =  GenerateQueries.query(new Films(),statement,"SELECT * from Film");
+
+        //for (Film film : filmList){System.out.println(film.getTitre());}
+
+
+
 
 
 

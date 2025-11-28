@@ -1,3 +1,5 @@
+package app;
+
 public class Ticket {
     private int ticket ;
     private double prix;

@@ -1,12 +1,12 @@
-import java.util.ArrayList;
-import java.sql.*;
+package app;
+
 public class Seance {
     private int seance_ID;
     private String horaire;
     private int salle;
     private int capaciter;
     //private ArrayList<Spectateurs> lesSpectateurs = new ArrayList<>();
-    Seance(int seance_ID,String horaire,int salle,int capaciter){
+    public Seance(int seance_ID, String horaire, int salle, int capaciter){
         this.seance_ID = seance_ID;
         this.horaire = horaire;
         this.salle = salle;
