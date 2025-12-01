@@ -40,6 +40,7 @@ public class Cinema {
             System.out.println("---------------MENU PRINCIPAL---------------");
             System.out.println("1- Afficher les Films: ");
             System.out.println("2- Reserver votre film preferer!: ");
+            System.out.println("0- Quitter: ");
             choix = input.nextInt();
             lesChoix(choix);
         } while (choix != 0);
